@@ -4,11 +4,13 @@ const useFetch = () => {
     const [data, setDate] = useState('')
     const [loading, setLoading] = useState(true);
 
+    const key = process.env.REACT_APP_API_KEY;
+
     useEffect(() => {
         fetch("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/europe", {
             "method": "GET",
             "headers": {
-                "x-rapidapi-key": "5aa5e98cd6msheb588d7b778cff3p1acd49jsnf8c2db9c9191",
+                "x-rapidapi-key":`${key}`,
                 "x-rapidapi-host": "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com"
             }
         })
