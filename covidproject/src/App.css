@@ -5,11 +5,12 @@ nav {
 
 .country {
   border: 2px solid blue;
-  margin-bottom: 10px;
   width: 50vw;
   min-width: 500px;
   max-width: 1000px;
   margin: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 body {
@@ -31,4 +32,36 @@ body {
 a{
   text-decoration: none;
   color: whitesmoke;
+}
+
+#covidImage{
+  max-width: 500px;
+  width: 50vw;
+  margin-left: 4vw;
+}
+
+#main-title{
+  color: whitesmoke;
+  width: 180px;
+  margin-left: 8vw;
+  margin-bottom: 10px;
+  margin-top: 80px;
+}
+
+#getInfo{
+  width: 330px;
+  background-color: rgb(66, 2, 139);
+  height: 45px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8vw;
+  margin-top: 0px;
+  transition: all ease-in 200ms;
+}
+
+#getInfo:hover{
+  background-color: rgb(32, 1, 19);
+
 }
