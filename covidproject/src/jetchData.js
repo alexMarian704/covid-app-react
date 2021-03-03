@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 
-const useFetch = () => {
+const useFetch = (url) => {
     const [data, setDate] = useState('')
     const [loading, setLoading] = useState(true);
+
+    const { region } = useParams();
 
     const key = process.env.REACT_APP_API_KEY;
 
     useEffect(() => {
-        fetch("https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/europe", {
+        fetch(`${url}`, {
             "method": "GET",
             "headers": {
                 "x-rapidapi-key":`${key}`,
@@ -15,18 +18,16 @@ const useFetch = () => {
             }
         })
             .then(res => {
-                console.log(res);
                 return res.json()
             })
             .then(data => {
-                console.log(data);
                 setDate(data);
                 setLoading(false)
             })
             .catch(err => {
                 console.error(err);
             });
-    }, [])
+    }, [region])
 
     return { data , loading }
 }

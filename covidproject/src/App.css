@@ -1,46 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
 }
 
+nav h1{
+  transition: all 200ms ease-in-out;
+}
+
+nav h1:hover{
+  color: rgb(205, 4, 255);
+}
+
+nav a:hover{
+  text-decoration: rgb(205, 4, 255);
+}
+
 .country {
-  border: 2px solid blue;
+  border: 2px solid rgb(255, 255, 255);
   width: 50vw;
-  min-width: 500px;
+  min-width: 300px;
   max-width: 1000px;
   margin: auto;
   border-radius: 10px;
   margin-bottom: 10px;
+  height: 300px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+}
+
+@media only screen and (max-width: 340px) {
+  .country {
+    min-width: 220px;
+    height: 400px;
+  }
+}
+
+.country h1{
+  margin: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  .country {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  nav {
+    font-size: 24px;
+  }
+
+  #links-container {
+    text-align: center;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+  }
+   #about {
+    margin-left: 10px;
+  }
 }
 
 body {
-  background: rgb(170, 19, 209);
-  background: linear-gradient(344deg, rgba(170, 19, 209, 1) 0%, rgba(213, 11, 224, 1) 19%, rgba(149, 69, 221, 1) 100%);
+  background: rgb(50,22,213);
+background: linear-gradient(344deg, rgba(50,22,213,1) 0%, rgba(81,27,189,1) 48%, rgba(51,0,255,1) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   height: 100%;
+  overflow-x: hidden;
 }
 
-#links-container{
+#links-container {
   text-align: center;
-  width: 260px;
+  width: 300px;
   display: flex;
   justify-content: space-around;
 }
 
-a{
+a {
   text-decoration: none;
   color: whitesmoke;
 }
 
-#covidImage{
+#covidImage {
   max-width: 500px;
   width: 50vw;
   margin-left: 4vw;
 }
 
-#main-title{
+#main-title {
   color: whitesmoke;
   width: 180px;
   margin-left: 8vw;
@@ -48,9 +101,9 @@ a{
   margin-top: 80px;
 }
 
-#getInfo{
+#getInfo {
   width: 330px;
-  background-color: rgb(66, 2, 139);
+  background-color: rgb(176, 10, 241);
   height: 45px;
   border-radius: 20px;
   display: flex;
@@ -61,7 +114,36 @@ a{
   transition: all ease-in 200ms;
 }
 
-#getInfo:hover{
+#getInfo:hover {
   background-color: rgb(32, 1, 19);
+}
 
+#info {
+  font-size: 25px;
+}
+
+#infoNav{
+  min-width: 330px;
+  width: 60vw;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid whitesmoke;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#infoNav h2{
+  margin: 0;
+  margin-top: 6px;
+}
+
+
+#loadingDiv{
+  width: 200px;
+  color: whitesmoke;
+  font-size: 40px;
+  font-weight: 600;
+  margin: auto;
+  text-align: center;
 }
