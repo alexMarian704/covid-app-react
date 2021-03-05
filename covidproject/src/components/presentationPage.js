@@ -12,9 +12,16 @@ const Presentation = () => (
             type:"just"
         }}>
         <h1 id="main-title">Covid-19</h1>
-        <div>
+        <div id="main-pre">
             <img src={covid} alt="covid" id="covidImage" />
             <Link to="/today/covid/europe"><h3 id="getInfo">Get information about Covid-19</h3></Link>
+        </div>
+        <div id="covidAdvice">
+            <h2>How to Protect Yourself & Others</h2>
+            <p>Everyone 2 and older should wear masks in public.</p>
+            <p>Masks should be worn in addition to staying at least 6 feet apart, especially around people who don’t live with you.</p>
+            <p>Wear your mask over your nose and mouth and secure it under your chin.</p>
+            <p>If you have to continually adjust your mask, it doesn’t fit properly, and you might need to find a different mask type or brand.</p>
         </div>
     </motion.div>
 )

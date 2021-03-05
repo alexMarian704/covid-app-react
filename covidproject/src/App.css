@@ -7,6 +7,9 @@
 nav {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 10px;
+  border-bottom: 2.5px solid wheat;
+  height: 80px;
 }
 
 nav h1{
@@ -27,11 +30,17 @@ nav a:hover{
   min-width: 300px;
   max-width: 1000px;
   margin: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  margin-top: 30px;
   height: 300px;
   padding-bottom: 20px;
   padding-left: 15px;
+  transition: transform 300ms;
+}
+
+.country:hover{
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 340px) {
@@ -43,6 +52,11 @@ nav a:hover{
 
 .country h1{
   margin: 0;
+  color: rgb(205, 4, 255);
+}
+
+.country p{
+  color: rgb(233, 233, 233);
 }
 
 @media only screen and (min-width: 700px) {
@@ -102,7 +116,9 @@ a {
 }
 
 #getInfo {
-  width: 330px;
+  width: 28vw;
+  max-width: 350px;
+  min-width: 270px;
   background-color: rgb(176, 10, 241);
   height: 45px;
   border-radius: 20px;
@@ -123,7 +139,7 @@ a {
 }
 
 #infoNav{
-  min-width: 330px;
+  min-width: 270px;
   width: 60vw;
   height: 40px;
   display: flex;
@@ -131,11 +147,27 @@ a {
   border: 2px solid whitesmoke;
   margin: auto;
   margin-bottom: 20px;
+  border-radius: 3px;
 }
 
 #infoNav h2{
   margin: 0;
   margin-top: 6px;
+}
+
+#info-route{
+  transition: all 200ms;
+  width: 20vw;
+  text-align: center;
+  min-width: 87px;
+  border-radius: 2px;
+  border-left: 2px solid whitesmoke;
+  border-right: 2px solid whitesmoke;
+}
+
+#info-route:hover{
+  background-color: rgb(205, 4, 255);
+  font-size: 17px;
 }
 
 
@@ -146,4 +178,91 @@ a {
   font-weight: 600;
   margin: auto;
   text-align: center;
+}
+
+#errorDiv{
+  width: 250px;
+  color: rgb(200, 24, 24);
+  font-size: 39px;
+  margin: auto;
+  text-align: center;
+}
+
+#covidAdvice{
+  color: whitesmoke;
+  width: 45vw;
+  margin-left: 42vw;
+  margin-top: -32vh;
+}
+
+#covidAdvice p{
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+#covidAdvice h2{
+  font-size: 32px;
+}
+
+#main-pre{
+  width: 45vw;
+}
+
+@media only screen and (max-width: 1300px) {
+    #covidAdvice{
+      margin-top: 0px;
+      margin-left: 8vw;
+      width: 80vw;
+    }  
+}
+
+#aboutUs{
+  width: 50vw;
+  height: 100px;
+  margin: auto;
+  color: whitesmoke;
+  text-align: center;
+}
+
+#aboutUs p{
+  font-size: 35px;
+}
+#aboutUs h1{
+  font-size: 45px;
+}
+
+#notFound{
+  color: whitesmoke;
+  font-size: 50px;
+  min-width: 270px;
+  width: 350px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+#pagerror{
+  width: 40vw;
+  margin: auto;
+  text-align: center;
+
+}
+
+#backMain{
+  width: 20vw;
+  background-color: rgb(246, 25, 25);
+  min-width: 270px;
+  max-width: 400px;
+  height: 40px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 300ms;
+}
+
+#backMain:hover{
+  background-color: rgb(184, 34, 34);
 }

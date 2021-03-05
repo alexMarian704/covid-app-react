@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Presentation from './components/presentationPage';
 import { AnimatePresence } from "framer-motion"
 import InfoNav from './components/infoNav';
+import AboutUs from './components/aboutUS';
+import Page404 from './components/404';
 
 function App() {
   return (
@@ -21,6 +23,12 @@ function App() {
               <div>
                 <Render />
               </div>
+            </Route>
+            <Route exact path="/about/us">
+              <AboutUs />
+            </Route>
+            <Route path="*">
+              <Page404 />
             </Route>
           </Switch>
         </div>
