@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion"
 import InfoNav from './components/infoNav';
 import AboutUs from './components/aboutUS';
 import Page404 from './components/404';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </AnimatePresence>
     </Router >
   );
